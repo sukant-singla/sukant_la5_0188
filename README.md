@@ -1,2 +1,6 @@
 # sukant_la5_0188
 lab 5 submission
+AIM - The aim of this assignment was to cluster detected face images based on their colour characteristics using the HSV colour space and KMeans clustering, and then predict which cluster a new template face image belongs to. The task involved- extracting hue and saturation features from face images,grouping similar faces using KMeans, predicting the cluster of a template image, visualising the clusters for interpretation.
+Before clustering, each image had to be: detected and cropped, resized,converted to HSV,summarised into numerical features This showed how preprocessing directly affects machine-learning performance.
+The KMeans model was trained using two features per face: mean hue, mean saturation. A major learning was that prediction must use the same feature format. Passing flattened pixel arrays (160000 features) caused errors because KMeans expected only 2 features.
+After clustering, it was necessary to visualise the results to confirm whether clusters made sense. Visuals helped verify whether faces in the same cluster had similar colour characteristics. Even though only hue and saturation were used, this task showed that machine-learning models rely heavily on how features are represented.
